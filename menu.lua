@@ -81,7 +81,7 @@ function menu_draw()
 	end
 	
 	for i = 1, 2 do
-		draw(groundimg, -math.fmod(scrollx, 120) + (i-1)*120, 59)
+		draw(groundimg, math.fmod(scrollx, 120) + (i-1)*120, 59)
 	end
 	for i, v in pairs(bushes) do
 		v:draw()
