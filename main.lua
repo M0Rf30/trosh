@@ -1,5 +1,5 @@
 function love.load()
-	love.graphics.setDefaultImageFilter("nearest", "nearest")
+	love.graphics.setDefaultFilter("nearest", "nearest")
 	
 	require "class"
 	require "menu"
@@ -24,7 +24,7 @@ function love.load()
 	require "bullet"
 	require "bird"
 	
-	love.graphics.setIcon( love.graphics.newImage("graphics/icon.png") )
+	love.window.setIcon( love.image.newImageData("graphics/icon.png") )
 	imagelist = {"title", "cloud1", "cloud2", "ground", "bush1", "bush2", "powerup", "rocket", "star", "asteroid-big1", "sunglasses", "awesome", "arrow", "groundwin",
 				"asteroid-big2", "asteroid-small1", "asteroid-small2", "bullet", "littleexplosion", "warning", "wheatley", "alert", "randomshit", "bird"}
 	
@@ -82,11 +82,11 @@ function love.load()
 	birdquad = {love.graphics.newQuad(0, 0, 29, 16, 29, 32), love.graphics.newQuad(0, 16, 29, 16, 29, 32)}
 	
 	scale = 8
-	local w, h = love.graphics.getMode()
+	local w, h = love.window.getMode()
 	if w ~= 100*scale or h ~= 80*scale then
-		love.graphics.setMode(100*scale, 80*scale, false, true, 0)
+		love.window.setMode(100*scale, 80*scale, false, true, 0)
 	end
-	love.graphics.setIcon( love.graphics.newImage("graphics/icon.png") )
+	love.window.setIcon( love.image.newImageData("graphics/icon.png") )
 	
 	bgmusic = love.audio.newSource("audio/trosong.ogg")
 	bgmusic:setLooping(true)
@@ -267,7 +267,7 @@ function properprint(s, x, y, sc)
 		else
 			local char = string.sub(s, i, i)
 			if fontquads[char] then
-				love.graphics.drawq(fontimage, fontquads[char], x*scale+((i-1)*8+1)*sc, y*scale, 0, sc, sc)
+				love.graphics.draw(fontimage, fontquads[char], x*scale+((i-1)*8+1)*sc, y*scale, 0, sc, sc)
 			end
 		end
 	end

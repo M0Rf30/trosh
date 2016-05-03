@@ -152,7 +152,7 @@ function scene6_draw()
 	end
 	
 	draw(groundwinimg, -168-landdiff, 56)
-	love.graphics.drawq(winplayerimg, winplayerquad[playerquad], 30*scale, 55*scale, 0, scale, scale, 5, 13)
+	love.graphics.draw(winplayerimg, winplayerquad[playerquad], 30*scale, 55*scale, 0, scale, scale, 5, 13)
 	
 	love.graphics.translate(20*scale, 50*scale)
 	love.graphics.rotate(-math.pi/7)

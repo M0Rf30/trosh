@@ -191,7 +191,7 @@ function scene5_draw()
 		draw(groundwinimg, -200+landingx+2, groundy)
 	end
 	
-	love.graphics.drawq(playerimg, playerquad[flyingquad], (playerx)*scale, playery*scale, 0, scale, scale, 13, 6)
+	love.graphics.draw(playerimg, playerquad[flyingquad], (playerx)*scale, playery*scale, 0, scale, scale, 13, 6)
 	
 	
 	if sunglasses then

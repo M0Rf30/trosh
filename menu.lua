@@ -87,7 +87,7 @@ function menu_draw()
 		v:draw()
 	end
 	
-	love.graphics.drawq(playerimg, playerquad[playerframe], playerx*scale, playery*scale, 0, scale, scale, 7, 12)
+	love.graphics.draw(playerimg, playerquad[playerframe], playerx*scale, playery*scale, 0, scale, scale, 7, 12)
 	for i, v in pairs(lasers) do
 		v:draw()
 	end

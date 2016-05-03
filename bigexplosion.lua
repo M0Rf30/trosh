@@ -24,7 +24,7 @@ function bigexplosion:draw()
 		love.graphics.setColor(255, 255, 255, 255*math.min(1, math.max(0, (1-starttimer/7))))
 	end
 	if self.quad <= 25 then
-		love.graphics.drawq(bigexplosionimg, bigexplosionquad[self.quad], self.x*scale, self.y*scale, 0, scale, scale)
+		love.graphics.draw(bigexplosionimg, bigexplosionquad[self.quad], self.x*scale, self.y*scale, 0, scale, scale)
 	end
 	love.graphics.setColor(r, g, b)
 end

@@ -139,7 +139,7 @@ function scene4_draw()
 		if rockets[1] then
 			off = rockets[1].startingoffset
 		end
-		love.graphics.drawq(playerimg, playerquad[flyingquad], (playerx+off)*scale, playery*scale, 0, scale, scale, 13, 6)
+		love.graphics.draw(playerimg, playerquad[flyingquad], (playerx+off)*scale, playery*scale, 0, scale, scale, 13, 6)
 	end
 	
 	if rockets[1] then
